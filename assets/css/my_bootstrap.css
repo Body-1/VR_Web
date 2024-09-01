@@ -1,0 +1,92 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.btn__box {
+    display: flex;
+    gap: 15px;
+}
+
+.normal-button,
+.outline-button {
+    width: 90px;
+    height: 35px;
+    border-radius: 7px;
+    border: 1.5px solid var(--main-color);
+    outline: none;
+    font-size: 1rem;
+    color: var(--white-color);
+    font-family: "Poppins", sans-serif;
+    transition: calc(var(--main-transition-duration) - .1s) ease-out;
+    -webkit-transition: calc(var(--main-transition-duration) - .1s) ease-out;
+    -moz-transition: calc(var(--main-transition-duration) - .1s) ease-out;
+    -ms-transition: calc(var(--main-transition-duration) - .1s) ease-out;
+    -o-transition: calc(var(--main-transition-duration) - .1s) ease-out;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.normal-button {
+    background-color: var(--main-color);
+}
+
+.normal-button:hover {
+    background-color: transparent;
+}
+
+.outline-button {
+    background-color: transparent;
+    transition: box-shadow .2s .3s ease-out, background-color .2s ease-out;
+    -webkit-transition: box-shadow .2s .3s ease-out, background-color .2s ease-out;
+    -moz-transition: box-shadow .2s .3s ease-out, background-color .2s ease-out;
+    -ms-transition: box-shadow .2s .3s ease-out, background-color .2s ease-out;
+    -o-transition: box-shadow .2s .3s ease-out, background-color .2s ease-out;
+}
+
+.outline-button:hover {
+    background-color: var(--main-color);
+    box-shadow: var(--box-shadow);
+}
+
+.my-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    gap: 40px;
+}
+
+.container {
+    margin: 0px auto;
+}
+
+
+/* Small Screens */
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium Screens */
+
+@media screen and (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large Screens */
+
+@media screen and (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
